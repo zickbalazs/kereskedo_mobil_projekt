@@ -7,6 +7,10 @@ body, html{
 footer{
     text-align: center;
 }
+footer>a{
+    color: black;
+    text-decoration: none;
+}
 @keyframes forgat{
     0%{transform:rotate3d(0)}
     33%{
@@ -49,6 +53,9 @@ nav>p>a{
     text-decoration: none;
     transition:color 0.2s;
 }
+article>div>{
+    margin-top: 15px;
+}
 #current, nav>p>a:hover{
     color:rgb(221, 221, 221);
 }
@@ -58,19 +65,67 @@ nav>p>a{
     justify-content: center;
     flex-flow: row wrap;
 }
-.flex>div>a>img{
+.flex>div>img{
     height: 300px;
-    margin:20px;
-}
-.flex img{
-    transition: transform 0.2;
-}
-.flex img:hover{
-    transform:scale(125%);
 }
 .flexAb{
     display:flex;
     flex-flow: row wrap;
     justify-content: space-around;   
     align-content: center;
+}
+.over>div>a{
+    color:rgb(221, 221, 221);
+    text-decoration: none;
+    transition:color 0.2s;
+}
+.over>div{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    color:white;
+    background-color: rgba(2, 2, 2, 0.25);
+    width: 100%;
+    height: 100%;
+    transition:font-size 0.2s, background-color 0.2s;
+    border-radius: 5px;
+    border:2px solid black;
+}
+.over{
+    position: relative;
+    padding-top: 15px;
+    padding-bottom:15px;
+    margin:50px;
+    width:250px;
+    border-radius: 5px;
+}
+.over>img{
+    opacity: 80%;
+    transition:filter 0.3s;
+    transition-delay: 0.1s;
+}
+.over:hover>img{
+    filter:blur(4px);
+}
+.over:hover>div{
+    font-size: larger;
+    background-color: rgba(2, 2, 2, 0.4);
+}
+.over>div>a:hover{
+    color:white;
+}
+@media screen and (max-width:900px){
+    header img{
+        width: 12%;
+    }
+}
+@media screen and (max-width:450px){
+    header img{
+        width: 25%;
+    }
+    nav{
+        flex-flow:column wrap;
+    }
 }
